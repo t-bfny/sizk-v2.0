@@ -1,0 +1,94 @@
+/* style.css */
+
+/* === Input Elements === */
+input[type="range"] {
+  width: 150px;
+}
+
+/* === Buttons === */
+button {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border: none;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background: #e0f7fa;
+}
+
+/* === Volume Control UI === */
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9em;
+}
+
+/* === Visual Effects === */
+#spectrumCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2; /* videoより前、contentより後でもOK */
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 0, 0, 0.05); /* 薄い赤で見えるか確認 */
+  }
+
+/* === Layout === */
+body {
+  margin: 0;
+  height: 100vh;
+  background: #aee1f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+/* === Water Animation ===*/
+.water {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, #aee1f9 0%, #6eb8d6 100%);
+  animation: wave 8s infinite linear;
+  opacity: 0.4;
+  border-radius: 50%;
+}
+
+/* === Video Background === */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.4; /* 半透明 */
+  filter: blur(2px); /* 水のゆらぎが柔らかく見える */
+}
+
+@keyframes wave {
+  0% { transform: translate(-25%, -25%) scale(1); }
+  50% { transform: translate(-25%, -25%) scale(1.1); }
+  100% { transform: translate(-25%, -25%) scale(1); }
+}
+
+/* === Content Area === */
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
