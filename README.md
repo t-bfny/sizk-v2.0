@@ -12,7 +12,7 @@ HTML / CSS / JavaScript を使って構成されています。
 - `on_the_cliff.webm`: 背景ビデオ
 - `Water_Drop03-4(Low-Dry).mp3`: 水滴音
 - `windchime.mp3`: 風鈴音
-- `Crash.mp3`: 現在使用中の音源（※著作権の都合で公開時は差し替え）
+- `aranami.mp3`: 使用中の音源
 
 ## 🚫 今後除外するファイル
 
