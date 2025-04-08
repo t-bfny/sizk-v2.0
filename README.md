@@ -13,7 +13,8 @@ HTML / CSS / JavaScript を使って構成されています。
 - `Water_Drop03-4(Low-Dry).mp3`: 水滴音
 - `windchime.mp3`: 風鈴音
 - `aranami.mp3`: 使用中の音源
-  - https://www.springin.org/sound-stock/category/environment/
+
+音源：https://www.springin.org/sound-stock/category/environment/
 
 ## 🚫 除外ファイル
 
