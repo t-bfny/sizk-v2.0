@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Water Vibes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="/public/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <video autoplay muted loop playsinline id="bgVideo">
+        <source src="on_the_cliff.webm" type="video/webm">
+    </video>
+    <div class="water"></div>
+    <canvas id="spectrumCanvas"></canvas>
+    <div class="content">
+        <button id="playWater1">水のしずく</button>
+        <button id="playWater2">風鈴の音</button>
+        <button id="bgmButton">START</button> <!-- BGM ボタン統一 -->
+        
+        <div class="volume-control">
+            🔉 BGM音量：
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+        </div>
+    </div>
+    
+    <div id="clock" style="
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 72px;
+        color: white;
+        font-family: roboto;
+        font-weight: bold;
+        z-index: 3;
+    "></div>
+
+
+    <!-- 効果音 -->
+    <audio id="water1" src="assets/Water_Drop03-1(Low-Reverb).mp3"></audio>
+    <audio id="water2" src="assets/windchime.mp3"></audio>
+    <audio id="bgm" src="assets/aranami.mp3" preload="auto" loop></audio> <!-- BGM用 -->
+  
+    <script>
+      // HTML要素を取得
+      const water1 = document.getElementById("water1");
+      const water2 = document.getElementById("water2");
+      const audioElement = document.getElementById("bgm");
+      const bgmButton = document.getElementById("bgmButton");
+      const volumeSlider = document.getElementById("volumeSlider");
+  
+      // 状態管理
+      let isBgmPlaying = false; // 初期状態はBGM停止
+  
+      // 効果音の再生
+      document.getElementById("playWater1").addEventListener("click", () => {
+          water1.currentTime = 0;
+          water1.play();
+      });
+  
+      document.getElementById("playWater2").addEventListener("click", () => {
+          water2.currentTime = 0;
+          water2.play();
+      });
+  
+      // BGM ON/OFF の切り替え
+      bgmButton.addEventListener("click", () => {
+          if (isBgmPlaying) {
+              audioElement.pause();
+              bgmButton.textContent = "BGM ON";
+          } else {
+              audioElement.play();
+              bgmButton.textContent = "BGM OFF";
+          }
+          isBgmPlaying = !isBgmPlaying; // 再生状態を反転
+      });
+  
+      // 音量調整
+      volumeSlider.addEventListener("input", () => {
+          audioElement.volume = volumeSlider.value;
+      });
+  
+      // ページロード時にBGMの音量を設定
+      window.addEventListener("load", () => {
+          audioElement.volume = volumeSlider.value;
+      });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
