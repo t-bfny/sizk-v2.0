@@ -15,5 +15,6 @@ old_*.html
 # その他のバックアップや中間ファイル
 *.bak
 *.tmp
+
 water04.html
 script-bak*.js

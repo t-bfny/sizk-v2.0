@@ -7,12 +7,15 @@ input[type="range"] {
 
 /* === Buttons === */
 button {
-  padding: 10px 20px;
-  font-size: 1.1em;
+  padding: 15px 30px;
+  font-size: 24px;
   border: none;
   background: white;
   border-radius: 10px;
   cursor: pointer;
+  width:80%;
+  margin: 10px auto;
+  display: block;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
@@ -22,10 +25,13 @@ button:hover {
 
 /* === Volume Control UI === */
 .volume-control {
-  display: flex;
+  width: 120%;
+  height: 20%;
+  display: block;
   align-items: center;
   gap: 10px;
-  font-size: 0.9em;
+  font-size: 1.1em;
+  margin: 20px auto;
 }
 
 /* === Visual Effects === */
