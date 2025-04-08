@@ -6,7 +6,7 @@ HTML / CSS / JavaScript を使って構成されています。
 
 ## 🔧 構成ファイル
 
-- `water04.html`: メインのHTML
+- `water05.html`: メインのHTML
 - `style.css`: スタイル（描画情報）
 - `script.js`: 音声再生・解析・描画
 - `on_the_cliff.webm`: 背景ビデオ
@@ -21,9 +21,12 @@ HTML / CSS / JavaScript を使って構成されています。
 - テスト用html
 - 初期企画ファイル（`.ini` など）
 - 著作権に配慮が必要な素材
+- 試作ファイル
+- バックアップファイル
 
 ## 📌 今後の課題
 
-- フリー音源への差し替え
-- 雫描画のバグ修正（詳細は後述）
+- BGM ON/OFF機能の実装
+- htmlファイルの不要な部分の消去
+- スマホ版UIの改善
 
