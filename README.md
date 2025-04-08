@@ -13,16 +13,16 @@ HTML / CSS / JavaScript を使って構成されています。
 - `Water_Drop03-4(Low-Dry).mp3`: 水滴音
 - `windchime.mp3`: 風鈴音
 - `aranami.mp3`: 使用中の音源
+  - https://www.springin.org/sound-stock/category/environment/
 
-## 🚫 今後除外するファイル
+## 🚫 除外ファイル
 
 `.gitignore` により以下はリポジトリに含めません：
 
 - テスト用html
 - 初期企画ファイル（`.ini` など）
 - 著作権に配慮が必要な素材
-- 試作ファイル
-- バックアップファイル
+- 試作用スクリプト
 
 ## 📌 今後の課題
 
